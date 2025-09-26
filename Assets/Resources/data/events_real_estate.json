@@ -1,0 +1,1185 @@
+{
+  "events": [
+    {
+      "id": "real_estate_event_01",
+      "industryId": "real_estate",
+      "rarity": "common",
+      "title": "Zoning Whisper",
+      "description": "Rumors say the council may upzone your warehouse district.",
+      "choices": [
+        {
+          "id": "lobby",
+          "label": "Lobby for yes vote",
+          "tooltip": "Could unlock value.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -8000,
+              "message": "Consultant hired."
+            },
+            {
+              "target": "marketShare",
+              "delta": 3,
+              "message": "Pipeline expands."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "wait",
+          "label": "Wait and see",
+          "tooltip": "Save money, risk delay.",
+          "effectsIfNoGates": [
+            {
+              "target": "legalRisk",
+              "delta": -2,
+              "message": "No paper trail."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_02",
+      "industryId": "real_estate",
+      "rarity": "rare",
+      "title": "StreamFlix Shoots",
+      "description": "StreamFlix wants to shoot a drama in your newest tower.",
+      "choices": [
+        {
+          "id": "host",
+          "label": "Host the crew",
+          "tooltip": "Earn location fees.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": 40000,
+              "message": "Location contract signed."
+            },
+            {
+              "target": "reputation",
+              "delta": 5,
+              "message": "Tower featured on shows."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "tooltip": "Avoid disruption.",
+          "effectsIfNoGates": [
+            {
+              "target": "employeeMorale",
+              "delta": 3,
+              "message": "Tenants appreciate quiet."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_03",
+      "industryId": "real_estate",
+      "rarity": "uncommon",
+      "title": "Rate Cycle Spike",
+      "description": "Borrowing costs jump as central bank hikes overnight.",
+      "choices": [
+        {
+          "id": "refinance",
+          "label": "Refinance immediately",
+          "tooltip": "Lock rates now.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -15000,
+              "message": "Refi fees."
+            },
+            {
+              "target": "legalRisk",
+              "delta": -6,
+              "message": "Debt secured."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "float",
+          "label": "Float the rate",
+          "tooltip": "Hope it drops soon.",
+          "effectsIfNoGates": [],
+          "gates": [
+            {
+              "type": "skillCheck",
+              "stat": "risk",
+              "threshold": 130,
+              "onSuccess": [
+                {
+                  "target": "cash",
+                  "delta": 20000,
+                  "message": "Rates dip next month."
+                }
+              ],
+              "onFail": [
+                {
+                  "target": "cash",
+                  "delta": -30000,
+                  "message": "Rates climb further."
+                },
+                {
+                  "target": "legalRisk",
+                  "delta": 6,
+                  "message": "Bank wants collateral."
+                }
+              ]
+            }
+          ],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_04",
+      "industryId": "real_estate",
+      "rarity": "common",
+      "title": "Coastal Erosion Alert",
+      "description": "City warns of erosion risk at your beach rentals.",
+      "choices": [
+        {
+          "id": "reinforce",
+          "label": "Reinforce shoreline",
+          "tooltip": "Protect assets.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -25000,
+              "message": "Seawall contractors paid."
+            },
+            {
+              "target": "sustainability",
+              "delta": 6,
+              "message": "Erosion slowed."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "insure",
+          "label": "Increase insurance",
+          "tooltip": "Pass cost to guests.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -8000,
+              "message": "Premiums rise."
+            },
+            {
+              "target": "revenue",
+              "delta": 5000,
+              "message": "Premium pricing rolled out."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_05",
+      "industryId": "real_estate",
+      "rarity": "uncommon",
+      "title": "Short-Term Cap",
+      "description": "City proposes cap on weekend rentals, hearings next month.",
+      "choices": [
+        {
+          "id": "advocate",
+          "label": "Advocate for hosts",
+          "tooltip": "Lobby council.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -6000,
+              "message": "Lobby firm hired."
+            },
+            {
+              "target": "legalRisk",
+              "delta": -5,
+              "message": "Cap softened."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "pivot",
+          "label": "Pivot to corporate leases",
+          "tooltip": "Stabilize occupancy.",
+          "effectsIfNoGates": [
+            {
+              "target": "revenue",
+              "delta": 7000,
+              "message": "Corporate deals sign."
+            },
+            {
+              "target": "marketShare",
+              "delta": -2,
+              "message": "Tourist market shrinks."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_06",
+      "industryId": "real_estate",
+      "rarity": "common",
+      "title": "MegaCorp HQ Rumor",
+      "description": "MegaCorp scouts land nearby.",
+      "choices": [
+        {
+          "id": "assemble",
+          "label": "Assemble parcels",
+          "tooltip": "Speculate smartly.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -20000,
+              "message": "Bought option contracts."
+            },
+            {
+              "target": "marketShare",
+              "delta": 4,
+              "message": "Land bank grows."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "ignore",
+          "label": "Ignore chatter",
+          "tooltip": "Stay lean.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": 5000,
+              "message": "Saved acquisition fees."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_07",
+      "industryId": "real_estate",
+      "rarity": "rare",
+      "title": "Archaeo Find",
+      "description": "Diggers uncover pottery; heritage agency steps in.",
+      "choices": [
+        {
+          "id": "cooperate",
+          "label": "Cooperate with agency",
+          "tooltip": "Gain heritage press.",
+          "effectsIfNoGates": [
+            {
+              "target": "legalRisk",
+              "delta": -8,
+              "message": "Permits restored."
+            },
+            {
+              "target": "reputation",
+              "delta": 5,
+              "message": "History buffs applaud."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "appeal",
+          "label": "Appeal decision",
+          "tooltip": "Resume faster.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -12000,
+              "message": "Legal battle."
+            },
+            {
+              "target": "innovation",
+              "delta": -3,
+              "message": "Architects stuck waiting."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_08",
+      "industryId": "real_estate",
+      "rarity": "common",
+      "title": "Smart Building Retrofit",
+      "description": "Vendors pitch IoT upgrade.",
+      "choices": [
+        {
+          "id": "install",
+          "label": "Install sensors",
+          "tooltip": "Lower energy bills.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -15000,
+              "message": "Smart system installed."
+            },
+            {
+              "target": "sustainability",
+              "delta": 10,
+              "message": "Energy footprint drops."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "delay",
+          "label": "Delay upgrade",
+          "tooltip": "Budget relief.",
+          "effectsIfNoGates": [
+            {
+              "target": "sustainability",
+              "delta": -4,
+              "message": "Old systems wasteful."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_09",
+      "industryId": "real_estate",
+      "rarity": "uncommon",
+      "title": "Tenant Union",
+      "description": "Tenants organize for rent freeze.",
+      "choices": [
+        {
+          "id": "meet",
+          "label": "Meet with reps",
+          "tooltip": "Collaborative solution.",
+          "effectsIfNoGates": [
+            {
+              "target": "employeeMorale",
+              "delta": 5,
+              "message": "Community feels heard."
+            },
+            {
+              "target": "revenue",
+              "delta": -5000,
+              "message": "Rent freeze concession."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "resist",
+          "label": "Resist demands",
+          "tooltip": "Maintain income.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -6,
+              "message": "Press paints villain."
+            },
+            {
+              "target": "marketShare",
+              "delta": -2,
+              "message": "Tenants churn."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_10",
+      "industryId": "real_estate",
+      "rarity": "common",
+      "title": "Solar Incentive",
+      "description": "Tax credit announced for rooftop solar.",
+      "choices": [
+        {
+          "id": "apply",
+          "label": "Apply for credits",
+          "tooltip": "Green roofs ahead.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -10000,
+              "message": "Install panels."
+            },
+            {
+              "target": "sustainability",
+              "delta": 12,
+              "message": "Energy savings skyrockets."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "pass",
+          "label": "Pass",
+          "tooltip": "Focus on other projects.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": 3000,
+              "message": "Capital reserved."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_11",
+      "industryId": "real_estate",
+      "rarity": "uncommon",
+      "title": "Insurance Shock",
+      "description": "Flood premiums triple overnight.",
+      "choices": [
+        {
+          "id": "diversify",
+          "label": "Diversify portfolio",
+          "tooltip": "Spread risk.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -25000,
+              "message": "Bought inland property."
+            },
+            {
+              "target": "legalRisk",
+              "delta": -6,
+              "message": "Exposure reduced."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "pass_cost",
+          "label": "Pass cost to tenants",
+          "tooltip": "Maintain margin.",
+          "effectsIfNoGates": [
+            {
+              "target": "revenue",
+              "delta": 9000,
+              "message": "Rent increases applied."
+            },
+            {
+              "target": "reputation",
+              "delta": -4,
+              "message": "Tenants upset."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_12",
+      "industryId": "real_estate",
+      "rarity": "common",
+      "title": "Luxury Condo Launch",
+      "description": "Pre-sales slower than expected.",
+      "choices": [
+        {
+          "id": "marketing",
+          "label": "Boost marketing",
+          "tooltip": "Influencer tours.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -12000,
+              "message": "AR tour campaign."
+            },
+            {
+              "target": "revenue",
+              "delta": 18000,
+              "message": "Units reserved."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "discount",
+          "label": "Offer limited discounts",
+          "tooltip": "Fast move-in.",
+          "effectsIfNoGates": [
+            {
+              "target": "revenue",
+              "delta": 10000,
+              "message": "Buyers bite."
+            },
+            {
+              "target": "reputation",
+              "delta": -3,
+              "message": "Brand feels less premium."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_13",
+      "industryId": "real_estate",
+      "rarity": "uncommon",
+      "title": "Gentrification Protest",
+      "description": "Community stages mural protest at your sales office.",
+      "choices": [
+        {
+          "id": "townhall",
+          "label": "Host town hall",
+          "tooltip": "Address concerns.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": 6,
+              "message": "Dialogue calms tensions."
+            },
+            {
+              "target": "cash",
+              "delta": -5000,
+              "message": "Community grants funded."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "security",
+          "label": "Increase security",
+          "tooltip": "Protect site.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -8000,
+              "message": "Security overtime."
+            },
+            {
+              "target": "reputation",
+              "delta": -7,
+              "message": "Accused of intimidation."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_14",
+      "industryId": "real_estate",
+      "rarity": "common",
+      "title": "Elevator Breakdown",
+      "description": "Flagship tower elevator fails.",
+      "choices": [
+        {
+          "id": "repair",
+          "label": "Overnight repairs",
+          "tooltip": "Restore trust.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -6000,
+              "message": "Emergency crew hired."
+            },
+            {
+              "target": "reputation",
+              "delta": 4,
+              "message": "Tenants grateful."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "replace",
+          "label": "Replace entire system",
+          "tooltip": "Prevent future issues.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -25000,
+              "message": "New lifts installed."
+            },
+            {
+              "target": "innovation",
+              "delta": 3,
+              "message": "Smart elevators wow."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_15",
+      "industryId": "real_estate",
+      "rarity": "rare",
+      "title": "Sinkhole Surprise",
+      "description": "Parking lot sinks suddenly.",
+      "choices": [
+        {
+          "id": "stabilize",
+          "label": "Stabilize site",
+          "tooltip": "Protect tenants.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -40000,
+              "message": "Engineers fill void."
+            },
+            {
+              "target": "legalRisk",
+              "delta": -10,
+              "message": "City satisfied."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "evacuate",
+          "label": "Evacuate & litigate",
+          "tooltip": "Pursue damages.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -15000,
+              "message": "Relocation stipends."
+            },
+            {
+              "target": "legalRisk",
+              "delta": 5,
+              "message": "Lawsuit pending."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_16",
+      "industryId": "real_estate",
+      "rarity": "common",
+      "title": "Modular Housing Pitch",
+      "description": "Startup touts prefab units.",
+      "choices": [
+        {
+          "id": "pilot",
+          "label": "Pilot prefab block",
+          "tooltip": "Fast expansion.",
+          "effectsIfNoGates": [
+            {
+              "target": "innovation",
+              "delta": 5,
+              "message": "Construction time halved."
+            },
+            {
+              "target": "cash",
+              "delta": -18000,
+              "message": "Prototype costs."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "tooltip": "Stick to traditional build.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -2,
+              "message": "Seen as old-school."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_17",
+      "industryId": "real_estate",
+      "rarity": "uncommon",
+      "title": "Data Center Query",
+      "description": "Cloud giant wants subterranean lease.",
+      "choices": [
+        {
+          "id": "lease",
+          "label": "Lease basement",
+          "tooltip": "Steady tenant.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": 20000,
+              "message": "Long-term lease."
+            },
+            {
+              "target": "sustainability",
+              "delta": -4,
+              "message": "Power usage spikes."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "decline",
+          "label": "Decline request",
+          "tooltip": "Keep noise low.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": 3,
+              "message": "Neighbors relieved."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_18",
+      "industryId": "real_estate",
+      "rarity": "common",
+      "title": "Green Roof Trend",
+      "description": "Architects push urban farms.",
+      "choices": [
+        {
+          "id": "garden",
+          "label": "Install urban farm",
+          "tooltip": "Create buzz.",
+          "effectsIfNoGates": [
+            {
+              "target": "sustainability",
+              "delta": 10,
+              "message": "Green roof thrives."
+            },
+            {
+              "target": "cash",
+              "delta": -10000,
+              "message": "Landscaping team hired."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "paint",
+          "label": "Paint cool roof",
+          "tooltip": "Cheaper efficiency.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -4000,
+              "message": "Reflective coating."
+            },
+            {
+              "target": "sustainability",
+              "delta": 4,
+              "message": "Heat island reduced."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_19",
+      "industryId": "real_estate",
+      "rarity": "rare",
+      "title": "Celebrity Penthouse",
+      "description": "TechBillionaire wants bespoke helipad access.",
+      "choices": [
+        {
+          "id": "custom",
+          "label": "Custom build helipad",
+          "tooltip": "Star treatment.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -60000,
+              "message": "Penthouse redo."
+            },
+            {
+              "target": "revenue",
+              "delta": 90000,
+              "message": "Record sale closes."
+            },
+            {
+              "target": "ownershipPct",
+              "delta": -2,
+              "message": "Founder grants perk."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "standard",
+          "label": "Offer standard unit",
+          "tooltip": "No special perks.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -4,
+              "message": "Celebrity walks away."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_20",
+      "industryId": "real_estate",
+      "rarity": "common",
+      "title": "Property Tax Appeal",
+      "description": "County reassessment spikes taxes.",
+      "choices": [
+        {
+          "id": "appeal",
+          "label": "Appeal assessment",
+          "tooltip": "Reduce bill.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -5000,
+              "message": "Attorney retained."
+            },
+            {
+              "target": "revenue",
+              "delta": 6000,
+              "message": "Taxes lowered."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "pay",
+          "label": "Pay quietly",
+          "tooltip": "Avoid red tape.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -12000,
+              "message": "Tax bill paid."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_21",
+      "industryId": "real_estate",
+      "rarity": "uncommon",
+      "title": "Construction Strike",
+      "description": "Contractors halt work.",
+      "choices": [
+        {
+          "id": "mediate",
+          "label": "Mediate dispute",
+          "tooltip": "Resume builds.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -7000,
+              "message": "Settlement reached."
+            },
+            {
+              "target": "marketShare",
+              "delta": 3,
+              "message": "Projects back on track."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "replace",
+          "label": "Hire new crews",
+          "tooltip": "Costly delays.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -20000,
+              "message": "New contractors onboarded."
+            },
+            {
+              "target": "innovation",
+              "delta": -4,
+              "message": "Learning curve."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_22",
+      "industryId": "real_estate",
+      "rarity": "common",
+      "title": "Air Quality Mandate",
+      "description": "City requires filtration upgrades.",
+      "choices": [
+        {
+          "id": "upgrade",
+          "label": "Upgrade filtration",
+          "tooltip": "Healthy brand.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -10000,
+              "message": "HVAC retrofit."
+            },
+            {
+              "target": "reputation",
+              "delta": 4,
+              "message": "Tenants feel safe."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "petition",
+          "label": "Petition for delay",
+          "tooltip": "Buy time.",
+          "effectsIfNoGates": [
+            {
+              "target": "legalRisk",
+              "delta": 2,
+              "message": "Extension granted."
+            },
+            {
+              "target": "reputation",
+              "delta": -3,
+              "message": "Seen as stalling."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_23",
+      "industryId": "real_estate",
+      "rarity": "uncommon",
+      "title": "Logistics Boom",
+      "description": "Harbor expansion boosts warehouse demand.",
+      "choices": [
+        {
+          "id": "build",
+          "label": "Build more warehouses",
+          "tooltip": "Capture demand.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -30000,
+              "message": "New construction."
+            },
+            {
+              "target": "revenue",
+              "delta": 35000,
+              "message": "Long-term leases."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "lease",
+          "label": "Lease existing space",
+          "tooltip": "Quick wins.",
+          "effectsIfNoGates": [
+            {
+              "target": "revenue",
+              "delta": 15000,
+              "message": "Harbor clients move in."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_24",
+      "industryId": "real_estate",
+      "rarity": "common",
+      "title": "Smart Locker Theft",
+      "description": "Package thieves hit lobby lockers.",
+      "choices": [
+        {
+          "id": "upgrade",
+          "label": "Upgrade security",
+          "tooltip": "Stop thefts.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -5000,
+              "message": "Better cameras installed."
+            },
+            {
+              "target": "reputation",
+              "delta": 4,
+              "message": "Tenants relieved."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "refund",
+          "label": "Refund packages",
+          "tooltip": "Placate tenants.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -4000,
+              "message": "Refund issued."
+            },
+            {
+              "target": "reputation",
+              "delta": 2,
+              "message": "Goodwill restored."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_25",
+      "industryId": "real_estate",
+      "rarity": "uncommon",
+      "title": "Community Land Trust",
+      "description": "Nonprofit proposes joint venture.",
+      "choices": [
+        {
+          "id": "partner",
+          "label": "Partner on affordable units",
+          "tooltip": "Share risk.",
+          "effectsIfNoGates": [
+            {
+              "target": "revenue",
+              "delta": -5000,
+              "message": "Subsidized rents."
+            },
+            {
+              "target": "reputation",
+              "delta": 8,
+              "message": "Praised for equity."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "decline",
+          "label": "Decline offer",
+          "tooltip": "Keep margins.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -5,
+              "message": "Critics say you're greedy."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "real_estate_event_26",
+      "industryId": "real_estate",
+      "rarity": "common",
+      "title": "Mixed-Use Festival",
+      "description": "Town hosts street festival outside.",
+      "choices": [
+        {
+          "id": "sponsor",
+          "label": "Sponsor event",
+          "tooltip": "Boost foot traffic.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -6000,
+              "message": "Festival budget."
+            },
+            {
+              "target": "revenue",
+              "delta": 12000,
+              "message": "Vendors rent kiosks."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "allow",
+          "label": "Allow free use",
+          "tooltip": "Community love.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": 5,
+              "message": "Local press loves generosity."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    }
+  ]
+}
