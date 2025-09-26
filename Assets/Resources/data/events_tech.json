@@ -1,0 +1,838 @@
+{
+  "events": [
+    {
+      "id": "tech_elon_like_parody",
+      "industryId": "tech",
+      "rarity": "rare",
+      "title": "Billionaire’s Boost",
+      "description": "A famous tech billionaire posts: “This app slaps.” Your servers feel the tremors.",
+      "oncePerRun": true,
+      "choices": [
+        {
+          "id": "retweet",
+          "label": "Retweet and ride the wave",
+          "tooltip": "Chase hypergrowth. Servers may buckle.",
+          "gates": [],
+          "effectsIfNoGates": [
+            {"target":"cash","delta":-50000,"message":"Scaled infra to handle surge."},
+            {"target":"reputation","delta":10,"message":"Everyone's talking."},
+            {"target":"marketShare","delta":5,"message":"Huge visibility."},
+            {"target":"revenue","delta":25000,"message":"Monetization uptick."}
+          ],
+          "followUps": [{"eventId":"tech_press_tour","delayMonths":1}]
+        },
+        {
+          "id": "play_cool",
+          "label": "Play it cool",
+          "tooltip": "Stable growth, fewer mishaps.",
+          "gates": [],
+          "effectsIfNoGates": [
+            {"target":"revenue","delta":8000,"message":"Steady uptick."},
+            {"target":"reputation","delta":3,"message":"Trust builds slowly."}
+          ],
+          "followUps": []
+        },
+        {
+          "id": "dm_billionaire",
+          "label": "Pitch a deal in DMs",
+          "tooltip": "High risk, high reward.",
+          "gates": [
+            {
+              "type":"skillCheck","stat":"negotiation","threshold":140,
+              "onSuccess":[{"target":"cash","delta":250000,"message":"Angel deal lands!"},{"target":"ownershipPct","delta":-5,"message":"Equity traded."}],
+              "onFail":[{"target":"reputation","delta":-5,"message":"Ghosted publicly."}]
+            }
+          ],
+          "effectsIfNoGates": [],
+          "followUps": []
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "tech_ai_rogue",
+      "industryId": "tech",
+      "rarity": "uncommon",
+      "title": "AI Goes Off-Script",
+      "description": "Your chatbot replied… creatively. Headlines are unkind.",
+      "choices": [
+        {
+          "id": "shutdown",
+          "label": "Shut it down & apologize",
+          "tooltip": "Own the mistake.",
+          "gates": [],
+          "effectsIfNoGates": [
+            {"target":"innovation","delta":-8,"message":"Pulled the feature."},
+            {"target":"reputation","delta":6,"message":"Public forgives… mostly."},
+            {"target":"legalRisk","delta":-5,"message":"Regulators appeased."}
+          ],
+          "followUps": []
+        },
+        {
+          "id": "double_down",
+          "label": "Frame it as 'edgy'",
+          "tooltip": "Could form a cult or a disaster.",
+          "gates": [
+            {
+              "type":"skillCheck","stat":"luck","threshold":150,
+              "onSuccess":[{"target":"marketShare","delta":4,"message":"Edgelords assemble."},{"target":"reputation","delta":-2,"message":"Polarizing brand."}],
+              "onFail":[{"target":"reputation","delta":-10,"message":"Backlash trend."},{"target":"legalRisk","delta":10,"message":"Complaints pile up."}]
+            }
+          ],
+          "effectsIfNoGates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_store_policy_shift",
+      "industryId": "tech",
+      "rarity": "common",
+      "title": "Store Policy Shake-Up",
+      "description": "The AppHub store changes fees & tracking rules.",
+      "choices": [
+        {
+          "id": "comply",
+          "label": "Comply swiftly",
+          "tooltip": "Costs money, reduces risk.",
+          "effectsIfNoGates":[
+            {"target":"cash","delta":-15000,"message":"Compliance engineers hired."},
+            {"target":"legalRisk","delta":-10,"message":"Less likely to be delisted."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "workaround",
+          "label": "Find a workaround",
+          "tooltip": "Cheaper now, risk later.",
+          "effectsIfNoGates":[
+            {"target":"cash","delta":-2000,"message":"Quick hack deployed."},
+            {"target":"legalRisk","delta":8,"message":"Might be flagged."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_press_tour",
+      "industryId": "tech",
+      "rarity": "uncommon",
+      "title": "Press Tour Chaos",
+      "description": "Media wants interviews; your CEO calendar melts.",
+      "choices": [
+        {
+          "id": "hire_pr",
+          "label": "Hire PopPR agency",
+          "tooltip": "Expensive but polished.",
+          "gates": [],
+          "effectsIfNoGates": [
+            {"target":"cash","delta":-30000,"message":"Retainer secured."},
+            {"target":"reputation","delta":7,"message":"Coverage glows."}
+          ],
+          "followUps": []
+        },
+        {
+          "id": "founder_host",
+          "label": "Founder handles it",
+          "tooltip": "Personal charm vs exhaustion.",
+          "gates": [
+            {
+              "type":"skillCheck","stat":"negotiation","threshold":120,
+              "onSuccess":[{"target":"reputation","delta":6,"message":"Authentic interviews."}],
+              "onFail":[{"target":"innovation","delta":-5,"message":"No time for product."}]
+            }
+          ],
+          "effectsIfNoGates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_server_fire",
+      "industryId": "tech",
+      "rarity": "rare",
+      "title": "Server Closet Sparks",
+      "description": "An overheated rack croaks mid-peak hours.",
+      "choices": [
+        {
+          "id": "backup_failover",
+          "label": "Fail over to backup cloud",
+          "tooltip": "Costs but keeps uptime.",
+          "effectsIfNoGates": [
+            {"target":"cash","delta":-40000,"message":"Emergency cloud spend."},
+            {"target":"reputation","delta":4,"message":"Users barely notice."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "tweet_thru",
+          "label": "Tweet through outage",
+          "tooltip": "Hope the meme shields you.",
+          "gates": [
+            {
+              "type":"skillCheck","stat":"creativity","threshold":135,
+              "onSuccess":[{"target":"reputation","delta":5,"message":"Fans love transparency."}],
+              "onFail":[{"target":"reputation","delta":-12,"message":"#AppDown trends."},{"target":"marketShare","delta":-3,"message":"Users churn."}]
+            }
+          ],
+          "effectsIfNoGates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_data_audit",
+      "industryId": "tech",
+      "rarity": "common",
+      "title": "Data Audit Ping",
+      "description": "Regulators request proof of privacy compliance.",
+      "choices": [
+        {
+          "id": "full_docs",
+          "label": "Produce full docs",
+          "tooltip": "Time-consuming paperwork.",
+          "effectsIfNoGates":[
+            {"target":"legalRisk","delta":-12,"message":"Auditor satisfied."},
+            {"target":"innovation","delta":-4,"message":"Engineers stuck in spreadsheets."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "stall",
+          "label": "Stall for time",
+          "tooltip": "Maybe they'll forget?",
+          "effectsIfNoGates":[
+            {"target":"legalRisk","delta":8,"message":"Deadline looms."},
+            {"target":"cash","delta":-2000,"message":"Lawyers on retainer."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_streamflop",
+      "industryId": "tech",
+      "rarity": "uncommon",
+      "title": "StreamBox Partnership",
+      "description": "StreamBox wants exclusive integration but demands roadmap control.",
+      "choices": [
+        {
+          "id": "agree",
+          "label": "Agree to partnership",
+          "tooltip": "Boost installs but less autonomy.",
+          "effectsIfNoGates":[
+            {"target":"marketShare","delta":6,"message":"StreamBox bundle sells."},
+            {"target":"innovation","delta":-5,"message":"Roadmap locked."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "decline",
+          "label": "Decline politely",
+          "tooltip": "Stay nimble.",
+          "effectsIfNoGates":[
+            {"target":"reputation","delta":3,"message":"Indie cred rises."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_intern_meme",
+      "industryId": "tech",
+      "rarity": "common",
+      "title": "Intern Meme Gone Viral",
+      "description": "A summer intern posted a spicy meme from the company account.",
+      "choices": [
+        {
+          "id": "embrace",
+          "label": "Embrace the chaos",
+          "tooltip": "Lean into the meme.",
+          "gates": [
+            {
+              "type":"skillCheck","stat":"creativity","threshold":120,
+              "onSuccess":[{"target":"reputation","delta":5,"message":"Fans applaud humor."}],
+              "onFail":[{"target":"reputation","delta":-7,"message":"Tone deaf?"}]
+            }
+          ],
+          "effectsIfNoGates": [],
+          "followUps": []
+        },
+        {
+          "id": "delete",
+          "label": "Delete and issue statement",
+          "tooltip": "Safe but boring.",
+          "effectsIfNoGates":[
+            {"target":"reputation","delta":1,"message":"Crisis averted."},
+            {"target":"employeeMorale","delta":-3,"message":"Intern walks on eggshells."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_microtransparency",
+      "industryId": "tech",
+      "rarity": "common",
+      "title": "Micropayment Transparency Push",
+      "description": "Users demand clearer cut on creator payouts.",
+      "choices": [
+        {
+          "id": "share_dashboard",
+          "label": "Launch creator dashboard",
+          "tooltip": "Engineering sprint required.",
+          "effectsIfNoGates": [
+            {"target":"cash","delta":-20000,"message":"Built analytics suite."},
+            {"target":"reputation","delta":6,"message":"Creators cheer."},
+            {"target":"marketShare","delta":2,"message":"New creators join."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "spin_it",
+          "label": "Spin up blog post",
+          "tooltip": "Cheaper but maybe hollow.",
+          "effectsIfNoGates": [
+            {"target":"cash","delta":-2000,"message":"PR copywriting."},
+            {"target":"reputation","delta":-4,"message":"Creators unconvinced."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_remote_policy",
+      "industryId": "tech",
+      "rarity": "uncommon",
+      "title": "Remote Policy Revolt",
+      "description": "Teams push back against return-to-office edict.",
+      "choices": [
+        {
+          "id": "flex",
+          "label": "Offer hybrid compromise",
+          "tooltip": "Keep morale up.",
+          "effectsIfNoGates": [
+            {"target":"employeeMorale","delta":8,"message":"Team feels heard."},
+            {"target":"innovation","delta":2,"message":"Fresh ideas from happy staff."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "double_down",
+          "label": "Double down on office",
+          "tooltip": "Maybe productivity?",
+          "effectsIfNoGates": [
+            {"target":"employeeMorale","delta":-10,"message":"Slack channels fume."},
+            {"target":"revenue","delta":5000,"message":"Onsite sales push wins deal."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_bug_bounty",
+      "industryId": "tech",
+      "rarity": "common",
+      "title": "Bug Bounty Drop",
+      "description": "White-hat hackers found critical vulnerability.",
+      "choices": [
+        {
+          "id": "pay_bounty",
+          "label": "Pay & patch",
+          "tooltip": "Respect the hunters.",
+          "effectsIfNoGates": [
+            {"target":"cash","delta":-10000,"message":"Paid bounty."},
+            {"target":"legalRisk","delta":-10,"message":"Breaches avoided."},
+            {"target":"reputation","delta":4,"message":"Security community nods."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "ignore",
+          "label": "Ignore for now",
+          "tooltip": "Hope no one notices.",
+          "effectsIfNoGates": [
+            {"target":"legalRisk","delta":15,"message":"Exploit window widens."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_ai_ethics_panel",
+      "industryId": "tech",
+      "rarity": "uncommon",
+      "title": "AI Ethics Panel Invite",
+      "description": "Global regulators want you on a panel about responsible AI.",
+      "choices": [
+        {
+          "id": "join",
+          "label": "Join panel",
+          "tooltip": "Goodwill but time-consuming.",
+          "effectsIfNoGates": [
+            {"target":"reputation","delta":7,"message":"Seen as responsible leader."},
+            {"target":"innovation","delta":-3,"message":"Less build time."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "decline",
+          "label": "Decline quietly",
+          "tooltip": "Keep focus internal.",
+          "effectsIfNoGates": [
+            {"target":"innovation","delta":3,"message":"Focus on roadmap."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "tech_subscriber_dip",
+      "industryId": "tech",
+      "rarity": "common",
+      "title": "Subscriber Dip",
+      "description": "Monthly subscribers drop 5%.",
+      "choices": [
+        {
+          "id": "launch_bundle",
+          "label": "Launch bundle with new perks",
+          "tooltip": "Costs cash.",
+          "effectsIfNoGates": [
+            {"target":"cash","delta":-15000,"message":"Bundle costs subsidies."},
+            {"target":"revenue","delta":20000,"message":"Win back subs."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "accept_loss",
+          "label": "Accept loss",
+          "tooltip": "Save money, lose clout.",
+          "effectsIfNoGates": [
+            {"target":"marketShare","delta":-3,"message":"Competitors poach."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_open_source_push",
+      "industryId": "tech",
+      "rarity": "uncommon",
+      "title": "Open-Source Push",
+      "description": "Community requests more transparency in your AI model.",
+      "choices": [
+        {
+          "id": "open_weights",
+          "label": "Open model weights",
+          "tooltip": "Gain goodwill but reveal secrets.",
+          "effectsIfNoGates": [
+            {"target":"innovation","delta":-6,"message":"Competitors learn quickly."},
+            {"target":"reputation","delta":9,"message":"Developers adore you."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "guard_ip",
+          "label": "Guard the IP",
+          "tooltip": "Stay proprietary.",
+          "effectsIfNoGates": [
+            {"target":"innovation","delta":3,"message":"Keep edge."},
+            {"target":"reputation","delta":-4,"message":"Accused of secrecy."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_cloud_bill",
+      "industryId": "tech",
+      "rarity": "common",
+      "title": "Cloud Bill Shock",
+      "description": "Usage spikes triggered surprise cloud invoice.",
+      "choices": [
+        {
+          "id": "optimize",
+          "label": "Optimize infrastructure",
+          "tooltip": "Invest in devops.",
+          "effectsIfNoGates": [
+            {"target":"cash","delta":-10000,"message":"Hired performance consultant."},
+            {"target":"revenue","delta":5000,"message":"Savings reinvested."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "accept_bill",
+          "label": "Accept cost",
+          "tooltip": "Hope growth continues.",
+          "effectsIfNoGates": [
+            {"target":"cash","delta":-30000,"message":"Paid invoice."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_vr_meetup",
+      "industryId": "tech",
+      "rarity": "uncommon",
+      "title": "VR Meetup Invitation",
+      "description": "MetaverseCo wants a joint hackathon.",
+      "choices": [
+        {
+          "id": "host",
+          "label": "Host event",
+          "tooltip": "Costs cash but builds hype.",
+          "effectsIfNoGates": [
+            {"target":"cash","delta":-12000,"message":"Event logistics."},
+            {"target":"innovation","delta":6,"message":"Hackers ship prototypes."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "skip",
+          "label": "Skip invite",
+          "tooltip": "Focus on core product.",
+          "effectsIfNoGates": [
+            {"target":"innovation","delta":2,"message":"Heads-down progress."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_hire_guru",
+      "industryId": "tech",
+      "rarity": "rare",
+      "title": "Guru For Hire",
+      "description": "A renowned developer (rhymes with 'Smalin Tusk') offers consulting.",
+      "choices": [
+        {
+          "id": "hire",
+          "label": "Hire for sprint",
+          "tooltip": "Pricey but brilliant.",
+          "effectsIfNoGates": [
+            {"target":"cash","delta":-80000,"message":"Consulting fee paid."},
+            {"target":"innovation","delta":12,"message":"Architecture leveled up."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "pass",
+          "label": "Pass on offer",
+          "tooltip": "Save money.",
+          "effectsIfNoGates": [
+            {"target":"cash","delta":10000,"message":"Focused on internal talent."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "tech_dao_offer",
+      "industryId": "tech",
+      "rarity": "rare",
+      "title": "DAO Buyout Proposal",
+      "description": "A decentralized autonomous org wants to buy 15% stake in tokens.",
+      "choices": [
+        {
+          "id": "token_deal",
+          "label": "Take token deal",
+          "tooltip": "Liquid cash, diluted control.",
+          "effectsIfNoGates": [
+            {"target":"cash","delta":150000,"message":"Token treasury infused."},
+            {"target":"ownershipPct","delta":-15,"message":"Token holders gain say."},
+            {"target":"legalRisk","delta":8,"message":"Regulators side-eye tokens."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "decline",
+          "label": "Decline tokens",
+          "tooltip": "Avoid chaos.",
+          "effectsIfNoGates": [
+            {"target":"reputation","delta":2,"message":"Traditional investors relieved."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_user_forum",
+      "industryId": "tech",
+      "rarity": "common",
+      "title": "User Forum Flood",
+      "description": "Community forum floods with feature requests.",
+      "choices": [
+        {
+          "id": "prioritize",
+          "label": "Prioritize top requests",
+          "tooltip": "Players feel heard.",
+          "effectsIfNoGates": [
+            {"target":"innovation","delta":5,"message":"Roadmap updated."},
+            {"target":"employeeMorale","delta":4,"message":"Team sees clear goals."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "ignore",
+          "label": "Ignore for now",
+          "tooltip": "Focus on big bets.",
+          "effectsIfNoGates": [
+            {"target":"reputation","delta":-5,"message":"Users feel unheard."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_ads_ban",
+      "industryId": "tech",
+      "rarity": "uncommon",
+      "title": "Ad Ban Proposal",
+      "description": "City council considers banning targeted ads.",
+      "choices": [
+        {
+          "id": "lobby",
+          "label": "Lobby politely",
+          "tooltip": "Hire policy firm.",
+          "effectsIfNoGates": [
+            {"target":"cash","delta":-25000,"message":"Lobby firm hired."},
+            {"target":"legalRisk","delta":-7,"message":"Draft softened."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "pivot",
+          "label": "Pivot to subscription",
+          "tooltip": "Rework business model.",
+          "effectsIfNoGates": [
+            {"target":"revenue","delta":10000,"message":"Beta subscribers join."},
+            {"target":"marketShare","delta":-2,"message":"Free users churn."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_gamified_onboarding",
+      "industryId": "tech",
+      "rarity": "common",
+      "title": "Gamified Onboarding Idea",
+      "description": "Product team suggests quests for new users.",
+      "choices": [
+        {
+          "id": "build",
+          "label": "Build quests",
+          "tooltip": "Increase activation.",
+          "effectsIfNoGates": [
+            {"target":"innovation","delta":4,"message":"Designers excited."},
+            {"target":"marketShare","delta":3,"message":"Retention improves."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "decline",
+          "label": "Keep flow simple",
+          "tooltip": "Avoid feature creep.",
+          "effectsIfNoGates": [
+            {"target":"innovation","delta":-2,"message":"Team disappointed."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_esports_sponsorship",
+      "industryId": "tech",
+      "rarity": "uncommon",
+      "title": "Esports Team Sponsorship",
+      "description": "The DigitalDukes want your logo on jerseys.",
+      "choices": [
+        {
+          "id": "sponsor",
+          "label": "Sponsor season",
+          "tooltip": "Boosts brand among gamers.",
+          "effectsIfNoGates": [
+            {"target":"cash","delta":-20000,"message":"Sponsorship fee."},
+            {"target":"reputation","delta":6,"message":"Gamers hype your brand."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "pass",
+          "label": "Pass",
+          "tooltip": "Focus on B2B.",
+          "effectsIfNoGates": [
+            {"target":"marketShare","delta":-1,"message":"Missed gamer crowd."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_docs_overhaul",
+      "industryId": "tech",
+      "rarity": "common",
+      "title": "Docs Overhaul",
+      "description": "API partners complain the docs are stale.",
+      "choices": [
+        {
+          "id": "rewrite",
+          "label": "Rewrite docs",
+          "tooltip": "Developer relations win.",
+          "effectsIfNoGates": [
+            {"target":"innovation","delta":3,"message":"Docs updated."},
+            {"target":"marketShare","delta":2,"message":"Partners integrate faster."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "ignore",
+          "label": "Ignore",
+          "tooltip": "Focus on features.",
+          "effectsIfNoGates": [
+            {"target":"reputation","delta":-4,"message":"Developers grumble."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_security_drill",
+      "industryId": "tech",
+      "rarity": "common",
+      "title": "Security Drill",
+      "description": "Simulated phishing test results come in.",
+      "choices": [
+        {
+          "id": "train",
+          "label": "Run mandatory training",
+          "tooltip": "Protects company.",
+          "effectsIfNoGates": [
+            {"target":"cash","delta":-5000,"message":"Training vendor hired."},
+            {"target":"legalRisk","delta":-6,"message":"Employees more alert."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "shrug",
+          "label": "Shrug it off",
+          "tooltip": "Save money now.",
+          "effectsIfNoGates": [
+            {"target":"legalRisk","delta":8,"message":"Future breach likely."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_acq_rumor",
+      "industryId": "tech",
+      "rarity": "rare",
+      "title": "MegaCorp Acquisition Rumor",
+      "description": "Leaks say MegaCorp eyes your product.",
+      "choices": [
+        {
+          "id": "explore",
+          "label": "Explore talks",
+          "tooltip": "Could cash out.",
+          "gates": [
+            {
+              "type":"skillCheck","stat":"negotiation","threshold":145,
+              "onSuccess":[{"target":"cash","delta":400000,"message":"MegaCorp invests upfront."}],
+              "onFail":[{"target":"reputation","delta":-6,"message":"Leak spooks users."},{"target":"marketShare","delta":-3,"message":"Competitors pounce."}]
+            }
+          ],
+          "effectsIfNoGates": [],
+          "followUps": [{"eventId":"tech_post_acq_integration","delayMonths":2}]
+        },
+        {
+          "id": "deny",
+          "label": "Publicly deny",
+          "tooltip": "Maintain independence.",
+          "effectsIfNoGates": [
+            {"target":"reputation","delta":3,"message":"Fans cheer indie spirit."}
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "tech_post_acq_integration",
+      "industryId": "tech",
+      "rarity": "rare",
+      "title": "Integration Crunch",
+      "description": "MegaCorp demands integration timeline yesterday.",
+      "choices": [
+        {
+          "id": "crunch",
+          "label": "Crunch hard",
+          "tooltip": "Deliver fast but burnout risk.",
+          "effectsIfNoGates": [
+            {"target":"employeeMorale","delta":-12,"message":"Team exhausted."},
+            {"target":"cash","delta":75000,"message":"Milestone payment."}
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "pushback",
+          "label": "Push back",
+          "tooltip": "Negotiate breathing room.",
+          "gates": [
+            {
+              "type":"skillCheck","stat":"negotiation","threshold":130,
+              "onSuccess":[{"target":"employeeMorale","delta":6,"message":"Healthy pace."}],
+              "onFail":[{"target":"legalRisk","delta":10,"message":"Contract penalties threatened."}]
+            }
+          ],
+          "effectsIfNoGates": [],
+          "followUps": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1267 @@
+{
+  "events": [
+    {
+      "id": "fashion_event_01",
+      "industryId": "fashion",
+      "rarity": "rare",
+      "title": "Runway Rebellion",
+      "description": "Model union threatens to walk if fittings run past midnight.",
+      "choices": [
+        {
+          "id": "negotiate",
+          "label": "Negotiate humane schedule",
+          "tooltip": "Keep goodwill.",
+          "effectsIfNoGates": [],
+          "gates": [
+            {
+              "type": "skillCheck",
+              "stat": "negotiation",
+              "threshold": 130,
+              "onSuccess": [
+                {
+                  "target": "reputation",
+                  "delta": 8,
+                  "message": "Models praise you."
+                },
+                {
+                  "target": "employeeMorale",
+                  "delta": 10,
+                  "message": "Team energized."
+                }
+              ],
+              "onFail": [
+                {
+                  "target": "reputation",
+                  "delta": -6,
+                  "message": "Rumors of chaos spread."
+                }
+              ]
+            }
+          ],
+          "followUps": []
+        },
+        {
+          "id": "push",
+          "label": "Push through fatigue",
+          "tooltip": "Finish faster.",
+          "effectsIfNoGates": [
+            {
+              "target": "innovation",
+              "delta": 3,
+              "message": "Collection polished."
+            },
+            {
+              "target": "employeeMorale",
+              "delta": -12,
+              "message": "Backstage burnout."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_02",
+      "industryId": "fashion",
+      "rarity": "uncommon",
+      "title": "PopBoyz Cameo",
+      "description": "Boy band PopBoyz wants to wear your jackets on tour.",
+      "choices": [
+        {
+          "id": "gift",
+          "label": "Gift outfits",
+          "tooltip": "Free marketing.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -10000,
+              "message": "Custom pieces shipped."
+            },
+            {
+              "target": "revenue",
+              "delta": 25000,
+              "message": "Merch orders explode."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "charge",
+          "label": "Charge licensing fee",
+          "tooltip": "Protect margins.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": 15000,
+              "message": "Upfront licensing."
+            },
+            {
+              "target": "reputation",
+              "delta": -3,
+              "message": "Fans grumble about paywall."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_03",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "Sustain Thread Audit",
+      "description": "EcoCollective requests proof of ethical sourcing.",
+      "choices": [
+        {
+          "id": "open",
+          "label": "Open your supply chain",
+          "tooltip": "Transparency boost.",
+          "effectsIfNoGates": [
+            {
+              "target": "sustainability",
+              "delta": 12,
+              "message": "Praised in eco blogs."
+            },
+            {
+              "target": "cash",
+              "delta": -6000,
+              "message": "Audits aren't free."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "deflect",
+          "label": "Deflect with marketing",
+          "tooltip": "Hope it passes.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -5,
+              "message": "Skeptics cry greenwash."
+            },
+            {
+              "target": "legalRisk",
+              "delta": 5,
+              "message": "NGO files complaint."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_04",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "Microdrop Strategy",
+      "description": "Scene #4 at Microdrop Strategy.",
+      "choices": [
+        {
+          "id": "drip",
+          "label": "Release microdrops weekly",
+          "tooltip": "Keep constant buzz.",
+          "effectsIfNoGates": [
+            {
+              "target": "revenue",
+              "delta": 12000,
+              "message": "Fans camp every Friday."
+            },
+            {
+              "target": "innovation",
+              "delta": -3,
+              "message": "Team stretched thin."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "seasonal",
+          "label": "Stick to seasons",
+          "tooltip": "Traditional pace.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": 2,
+              "message": "Editors appreciate coherence."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_05",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "Archive Capsule",
+      "description": "Scene #5 at Archive Capsule.",
+      "choices": [
+        {
+          "id": "remix",
+          "label": "Remix archive pieces",
+          "tooltip": "Nostalgia sells.",
+          "effectsIfNoGates": [
+            {
+              "target": "revenue",
+              "delta": 16000,
+              "message": "Fans adore reboot."
+            },
+            {
+              "target": "reputation",
+              "delta": 5,
+              "message": "Press calls it genius."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "store",
+          "label": "Keep archive closed",
+          "tooltip": "Mystique remains.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": 1,
+              "message": "Mystery maintained."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_06",
+      "industryId": "fashion",
+      "rarity": "uncommon",
+      "title": "Influencer Stitch",
+      "description": "Scene #6 at Influencer Stitch.",
+      "choices": [
+        {
+          "id": "collab",
+          "label": "Co-design with streaming sewist",
+          "tooltip": "Build community.",
+          "effectsIfNoGates": [
+            {
+              "target": "innovation",
+              "delta": 6,
+              "message": "Fresh silhouettes."
+            },
+            {
+              "target": "cash",
+              "delta": -5000,
+              "message": "Collab budget."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "sponsor",
+          "label": "Sponsor their stream",
+          "tooltip": "Lower lift.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -2000,
+              "message": "Sponsorship."
+            },
+            {
+              "target": "reputation",
+              "delta": 2,
+              "message": "Viewers notice brand."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_07",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "Runway Leak",
+      "description": "Draft sketches leaked on FashionSnitch.",
+      "choices": [
+        {
+          "id": "own",
+          "label": "Own the leak",
+          "tooltip": "Turn into teaser.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": 6,
+              "message": "Fans think leak was planned."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "clamp",
+          "label": "Clamp down",
+          "tooltip": "Hire investigators.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -7000,
+              "message": "Security team hired."
+            },
+            {
+              "target": "legalRisk",
+              "delta": -5,
+              "message": "Leak plugged."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_08",
+      "industryId": "fashion",
+      "rarity": "rare",
+      "title": "Hype Sneaker Restock",
+      "description": "Scene #8 at Hype Sneaker Restock.",
+      "choices": [
+        {
+          "id": "raffle",
+          "label": "Use raffle",
+          "tooltip": "Fair distribution.",
+          "effectsIfNoGates": [
+            {
+              "target": "revenue",
+              "delta": 20000,
+              "message": "Entries explode."
+            },
+            {
+              "target": "reputation",
+              "delta": 3,
+              "message": "Fans praise fairness."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "fcfs",
+          "label": "First-come drop",
+          "tooltip": "Chaos marketing.",
+          "effectsIfNoGates": [],
+          "gates": [
+            {
+              "type": "skillCheck",
+              "stat": "risk",
+              "threshold": 125,
+              "onSuccess": [
+                {
+                  "target": "marketShare",
+                  "delta": 5,
+                  "message": "Lines around block."
+                }
+              ],
+              "onFail": [
+                {
+                  "target": "reputation",
+                  "delta": -8,
+                  "message": "Bots buy everything."
+                }
+              ]
+            }
+          ],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_09",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "Fabric Shortage",
+      "description": "Scene #9 at Fabric Shortage.",
+      "choices": [
+        {
+          "id": "source",
+          "label": "Source alternative fabric",
+          "tooltip": "Keep production.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -9000,
+              "message": "Express shipping."
+            },
+            {
+              "target": "innovation",
+              "delta": 2,
+              "message": "Discover new texture."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "delay",
+          "label": "Delay drop",
+          "tooltip": "Avoid compromise.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -3,
+              "message": "Fans grow impatient."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_10",
+      "industryId": "fashion",
+      "rarity": "uncommon",
+      "title": "Metaverse Fitting",
+      "description": "MetaverseCo wants digital twins of your collection.",
+      "choices": [
+        {
+          "id": "scan",
+          "label": "Scan collection",
+          "tooltip": "Sell digital skins.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -6000,
+              "message": "3D scanning rig."
+            },
+            {
+              "target": "revenue",
+              "delta": 15000,
+              "message": "Avatar sales boom."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "pass",
+          "label": "Pass on metaverse",
+          "tooltip": "Stay IRL.",
+          "effectsIfNoGates": [
+            {
+              "target": "innovation",
+              "delta": -3,
+              "message": "Seen as old-school."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_11",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "Streetwear Collab",
+      "description": "Scene #11 at Streetwear Collab.",
+      "choices": [
+        {
+          "id": "team",
+          "label": "Team with Graffik Crew",
+          "tooltip": "Cross cultures.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": 7,
+              "message": "Collab headlines."
+            },
+            {
+              "target": "cash",
+              "delta": -8000,
+              "message": "Revenue split."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "solo",
+          "label": "Stay solo",
+          "tooltip": "Protect identity.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -2,
+              "message": "Fans crave collabs."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_12",
+      "industryId": "fashion",
+      "rarity": "rare",
+      "title": "Knockoff Lawsuit",
+      "description": "MegaFastFashion clones your design overnight.",
+      "choices": [
+        {
+          "id": "sue",
+          "label": "File lawsuit",
+          "tooltip": "Protect IP.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -12000,
+              "message": "Legal fees."
+            },
+            {
+              "target": "legalRisk",
+              "delta": -10,
+              "message": "Court grants injunction."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "pivot",
+          "label": "Pivot marketing",
+          "tooltip": "Out-create them.",
+          "effectsIfNoGates": [
+            {
+              "target": "innovation",
+              "delta": 5,
+              "message": "New drop overshadows knockoff."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_13",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "Pop-Up Bodega",
+      "description": "Scene #13 at Pop-Up Bodega.",
+      "choices": [
+        {
+          "id": "launch",
+          "label": "Launch pop-up",
+          "tooltip": "Urban hype.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -7000,
+              "message": "Leased corner store."
+            },
+            {
+              "target": "revenue",
+              "delta": 16000,
+              "message": "Lines wrap block."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "skip",
+          "label": "Skip",
+          "tooltip": "Focus online.",
+          "effectsIfNoGates": [
+            {
+              "target": "marketShare",
+              "delta": -2,
+              "message": "Missed street buzz."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_14",
+      "industryId": "fashion",
+      "rarity": "uncommon",
+      "title": "SewBot Demo",
+      "description": "Scene #14 at SewBot Demo.",
+      "choices": [
+        {
+          "id": "automate",
+          "label": "Automate stitch line",
+          "tooltip": "Boost efficiency.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -15000,
+              "message": "Robots installed."
+            },
+            {
+              "target": "innovation",
+              "delta": 6,
+              "message": "Process optimized."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "train",
+          "label": "Train artisans",
+          "tooltip": "Human touch.",
+          "effectsIfNoGates": [
+            {
+              "target": "employeeMorale",
+              "delta": 6,
+              "message": "Craft valued."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_15",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "Circular Fashion Fair",
+      "description": "Scene #15 at Circular Fashion Fair.",
+      "choices": [
+        {
+          "id": "host",
+          "label": "Host upcycle booth",
+          "tooltip": "Sustainability cred.",
+          "effectsIfNoGates": [
+            {
+              "target": "sustainability",
+              "delta": 12,
+              "message": "Circular fans cheer."
+            },
+            {
+              "target": "cash",
+              "delta": -5000,
+              "message": "Workshop costs."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "sponsor",
+          "label": "Sponsor from afar",
+          "tooltip": "Lower effort.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -2000,
+              "message": "Sponsor banner."
+            },
+            {
+              "target": "reputation",
+              "delta": 3,
+              "message": "Logo seen everywhere."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_16",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "Retro Trend Spike",
+      "description": "Scene #16 at Retro Trend Spike.",
+      "choices": [
+        {
+          "id": "revive",
+          "label": "Revive retro line",
+          "tooltip": "Ride nostalgia.",
+          "effectsIfNoGates": [
+            {
+              "target": "revenue",
+              "delta": 14000,
+              "message": "Throwback pieces sell out."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "ignore",
+          "label": "Ignore trend",
+          "tooltip": "Stay future-focused.",
+          "effectsIfNoGates": [
+            {
+              "target": "marketShare",
+              "delta": -3,
+              "message": "Competitors cash in."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_17",
+      "industryId": "fashion",
+      "rarity": "uncommon",
+      "title": "Designer Poach Attempt",
+      "description": "Scene #17 at Designer Poach Attempt.",
+      "choices": [
+        {
+          "id": "counter",
+          "label": "Counter-offer",
+          "tooltip": "Keep star designer.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -18000,
+              "message": "Retention bonus."
+            },
+            {
+              "target": "innovation",
+              "delta": 7,
+              "message": "Visionary stays."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "let_go",
+          "label": "Let them go",
+          "tooltip": "Fresh blood soon.",
+          "effectsIfNoGates": [
+            {
+              "target": "innovation",
+              "delta": -5,
+              "message": "Vision gap."
+            },
+            {
+              "target": "cash",
+              "delta": 8000,
+              "message": "Salary saved."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_18",
+      "industryId": "fashion",
+      "rarity": "rare",
+      "title": "Luxury Tax Proposal",
+      "description": "Scene #18 at Luxury Tax Proposal.",
+      "choices": [
+        {
+          "id": "lobby",
+          "label": "Lobby parliament",
+          "tooltip": "Reduce impact.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -9000,
+              "message": "Lobby expenses."
+            },
+            {
+              "target": "legalRisk",
+              "delta": -6,
+              "message": "Bill softened."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "absorb",
+          "label": "Absorb cost",
+          "tooltip": "Keep customers happy.",
+          "effectsIfNoGates": [
+            {
+              "target": "revenue",
+              "delta": -10000,
+              "message": "Margins squeezed."
+            },
+            {
+              "target": "reputation",
+              "delta": 5,
+              "message": "Fans applaud stance."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_19",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "Climate Protest",
+      "description": "Activists chain themselves outside your flagship over waste.",
+      "choices": [
+        {
+          "id": "meet",
+          "label": "Meet protest leaders",
+          "tooltip": "Collaborative fix.",
+          "effectsIfNoGates": [
+            {
+              "target": "sustainability",
+              "delta": 10,
+              "message": "Roadmap co-created."
+            },
+            {
+              "target": "cash",
+              "delta": -4000,
+              "message": "Implement greener dyes."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "ignore",
+          "label": "Ignore protest",
+          "tooltip": "Hope it fizzles.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -10,
+              "message": "Viral call-out."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_20",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "Supply Chain Strike",
+      "description": "Scene #20 at Supply Chain Strike.",
+      "choices": [
+        {
+          "id": "mediate",
+          "label": "Mediate strike",
+          "tooltip": "Keep deliveries moving.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -5000,
+              "message": "Concessions granted."
+            },
+            {
+              "target": "revenue",
+              "delta": 10000,
+              "message": "Production resumes."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "replace",
+          "label": "Replace suppliers",
+          "tooltip": "Risk relationships.",
+          "effectsIfNoGates": [
+            {
+              "target": "legalRisk",
+              "delta": 6,
+              "message": "Breach of contract claims."
+            },
+            {
+              "target": "innovation",
+              "delta": -2,
+              "message": "Quality uncertain."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_21",
+      "industryId": "fashion",
+      "rarity": "uncommon",
+      "title": "Meme Tee Craze",
+      "description": "Scene #21 at Meme Tee Craze.",
+      "choices": [
+        {
+          "id": "print",
+          "label": "Print meme tees",
+          "tooltip": "Strike while viral.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -4000,
+              "message": "Rush printing."
+            },
+            {
+              "target": "revenue",
+              "delta": 12000,
+              "message": "Sales explode."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "pass",
+          "label": "Pass",
+          "tooltip": "Stay luxe.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": 1,
+              "message": "High fashion purists nod."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_22",
+      "industryId": "fashion",
+      "rarity": "rare",
+      "title": "Haute Couture Review",
+      "description": "Scene #22 at Haute Couture Review.",
+      "choices": [
+        {
+          "id": "invite",
+          "label": "Invite critic",
+          "tooltip": "Seek honest review.",
+          "effectsIfNoGates": [],
+          "gates": [
+            {
+              "type": "skillCheck",
+              "stat": "creativity",
+              "threshold": 140,
+              "onSuccess": [
+                {
+                  "target": "reputation",
+                  "delta": 12,
+                  "message": "Review raves."
+                },
+                {
+                  "target": "revenue",
+                  "delta": 20000,
+                  "message": "Orders pour in."
+                }
+              ],
+              "onFail": [
+                {
+                  "target": "reputation",
+                  "delta": -12,
+                  "message": "Critic savages show."
+                }
+              ]
+            }
+          ],
+          "followUps": []
+        },
+        {
+          "id": "limit",
+          "label": "Limit press",
+          "tooltip": "Control narrative.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -3,
+              "message": "Press feels snubbed."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_23",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "Warehouse Flood",
+      "description": "Storm water ruins fabric rolls.",
+      "choices": [
+        {
+          "id": "salvage",
+          "label": "Salvage pieces",
+          "tooltip": "Quick cleanup.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -8000,
+              "message": "Dry cleaning bill."
+            },
+            {
+              "target": "revenue",
+              "delta": 5000,
+              "message": "Recovered stock sold."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "insurance",
+          "label": "File insurance claim",
+          "tooltip": "Slow but reimbursed.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": 15000,
+              "message": "Payout arrives."
+            },
+            {
+              "target": "legalRisk",
+              "delta": 3,
+              "message": "Adjuster scrutiny."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_24",
+      "industryId": "fashion",
+      "rarity": "uncommon",
+      "title": "Virtual Runway Show",
+      "description": "Scene #24 at Virtual Runway Show.",
+      "choices": [
+        {
+          "id": "stream",
+          "label": "Stream on HoloCast",
+          "tooltip": "Global reach.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -6000,
+              "message": "Production crew."
+            },
+            {
+              "target": "marketShare",
+              "delta": 4,
+              "message": "Global fans tune in."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "exclusive",
+          "label": "Keep exclusive",
+          "tooltip": "VIP only.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": 3,
+              "message": "Scarcity sells."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_25",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "ArtSchool Internship",
+      "description": "Scene #25 at ArtSchool Internship.",
+      "choices": [
+        {
+          "id": "mentor",
+          "label": "Mentor cohort",
+          "tooltip": "Future talent.",
+          "effectsIfNoGates": [
+            {
+              "target": "innovation",
+              "delta": 4,
+              "message": "Fresh ideas flow."
+            },
+            {
+              "target": "cash",
+              "delta": -2000,
+              "message": "Stipend paid."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "tooltip": "Less overhead.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -2,
+              "message": "Students disappointed."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_26",
+      "industryId": "fashion",
+      "rarity": "uncommon",
+      "title": "Sneaker Resell Scandal",
+      "description": "Scene #26 at Sneaker Resell Scandal.",
+      "choices": [
+        {
+          "id": "ban",
+          "label": "Ban resellers",
+          "tooltip": "Protect fans.",
+          "effectsIfNoGates": [
+            {
+              "target": "marketShare",
+              "delta": -2,
+              "message": "Less hype volume."
+            },
+            {
+              "target": "reputation",
+              "delta": 5,
+              "message": "Community applauds fairness."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "embrace",
+          "label": "Embrace resell",
+          "tooltip": "Profit from demand.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": 10000,
+              "message": "Resell partnership."
+            },
+            {
+              "target": "reputation",
+              "delta": -5,
+              "message": "Fans accuse you of greed."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_27",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "Genderless Line Push",
+      "description": "Scene #27 at Genderless Line Push.",
+      "choices": [
+        {
+          "id": "launch",
+          "label": "Launch genderless line",
+          "tooltip": "Inclusive move.",
+          "effectsIfNoGates": [
+            {
+              "target": "revenue",
+              "delta": 10000,
+              "message": "Inclusive customers shop."
+            },
+            {
+              "target": "reputation",
+              "delta": 6,
+              "message": "Progressive press love."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "delay",
+          "label": "Delay launch",
+          "tooltip": "Research more.",
+          "effectsIfNoGates": [
+            {
+              "target": "innovation",
+              "delta": -3,
+              "message": "Momentum lost."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "fashion_event_28",
+      "industryId": "fashion",
+      "rarity": "common",
+      "title": "Secret Shopper Mystery",
+      "description": "Anonymous shopper reports inconsistent service.",
+      "choices": [
+        {
+          "id": "investigate",
+          "label": "Investigate service",
+          "tooltip": "Tighten retail.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -3000,
+              "message": "Training refresh."
+            },
+            {
+              "target": "reputation",
+              "delta": 3,
+              "message": "Guests notice improvement."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "shrug",
+          "label": "Ignore report",
+          "tooltip": "Assume outlier.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -4,
+              "message": "Mystery post goes viral."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    }
+  ]
+}

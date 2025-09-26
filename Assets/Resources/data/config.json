@@ -1,0 +1,12 @@
+{
+  "startYear": 2026,
+  "turnIsMonths": 1,
+  "rarityWeights": { "common": 70, "uncommon": 22, "rare": 7, "legendary": 1 },
+  "startingCashByBackground": { "Wealthy": 50000, "MiddleClass": 5000, "LowIncome": 1000 },
+  "startingTraitsByEducation": {
+    "Dropout":      { "risk":70, "negotiation":40, "creativity":70, "ethics":45, "luck":50 },
+    "SelfTaught":   { "risk":60, "negotiation":50, "creativity":65, "ethics":55, "luck":50 },
+    "Bachelor":     { "risk":50, "negotiation":55, "creativity":55, "ethics":60, "luck":50 },
+    "MBA":          { "risk":40, "negotiation":70, "creativity":50, "ethics":65, "luck":50 }
+  }
+}

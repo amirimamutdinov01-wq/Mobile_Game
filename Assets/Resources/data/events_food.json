@@ -1,0 +1,1157 @@
+{
+  "events": [
+    {
+      "id": "food_event_01",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Delivery Dilemma",
+      "description": "Your FryDash partnership is late on payments.",
+      "choices": [
+        {
+          "id": "press",
+          "label": "Press them publicly",
+          "tooltip": "Risk the relationship.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": 12000,
+              "message": "Backpay arrives."
+            },
+            {
+              "target": "reputation",
+              "delta": -4,
+              "message": "Drivers grumble."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "wait",
+          "label": "Wait it out",
+          "tooltip": "Maintain calm.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -2000,
+              "message": "Cover courier bonuses."
+            },
+            {
+              "target": "reputation",
+              "delta": 2,
+              "message": "Partners appreciate patience."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_02",
+      "industryId": "food",
+      "rarity": "uncommon",
+      "title": "Viral Sauce Craze",
+      "description": "Customers beg for your tangy 'SaucyFlex'.",
+      "choices": [
+        {
+          "id": "bottle",
+          "label": "Bottle and sell",
+          "tooltip": "Expand SKU.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -8000,
+              "message": "Packaging line setup."
+            },
+            {
+              "target": "revenue",
+              "delta": 18000,
+              "message": "Retail orders flow."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "limited",
+          "label": "Keep it in-store",
+          "tooltip": "Stay exclusive.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": 5,
+              "message": "Foodies flock for exclusivity."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_03",
+      "industryId": "food",
+      "rarity": "rare",
+      "title": "ChefFury Visit",
+      "description": "A fiery TV host drops by unannounced.",
+      "oncePerRun": true,
+      "choices": [
+        {
+          "id": "perform",
+          "label": "Stage a flawless service",
+          "tooltip": "Impress the cameras.",
+          "effectsIfNoGates": [],
+          "gates": [
+            {
+              "type": "skillCheck",
+              "stat": "negotiation",
+              "threshold": 135,
+              "onSuccess": [
+                {
+                  "target": "reputation",
+                  "delta": 12,
+                  "message": "Episode praises you."
+                },
+                {
+                  "target": "revenue",
+                  "delta": 30000,
+                  "message": "Reservations spike."
+                }
+              ],
+              "onFail": [
+                {
+                  "target": "reputation",
+                  "delta": -10,
+                  "message": "Clip goes viral for wrong reason."
+                }
+              ]
+            }
+          ],
+          "followUps": []
+        },
+        {
+          "id": "deny",
+          "label": "Deny entry",
+          "tooltip": "Avoid risk entirely.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -2,
+              "message": "Fans disappointed."
+            },
+            {
+              "target": "legalRisk",
+              "delta": -3,
+              "message": "No camera waivers needed."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_04",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Supply Chain Snag",
+      "description": "Scenario #4: Supply Chain Snag.",
+      "choices": [
+        {
+          "id": "charter",
+          "label": "Charter private shipment",
+          "tooltip": "Costly but reliable.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -12000,
+              "message": "Rented refrigerated truck."
+            },
+            {
+              "target": "revenue",
+              "delta": 9000,
+              "message": "Menu stays stocked."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "substitute",
+          "label": "Substitute ingredients",
+          "tooltip": "Risk flavor.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -3,
+              "message": "Regulars notice change."
+            },
+            {
+              "target": "cash",
+              "delta": -2000,
+              "message": "Cheaper suppliers."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_05",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Ghost Kitchen Offer",
+      "description": "Scenario #5: Ghost Kitchen Offer.",
+      "choices": [
+        {
+          "id": "accept",
+          "label": "Accept ghost kitchen",
+          "tooltip": "Expand reach.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -5000,
+              "message": "Setup ghost station."
+            },
+            {
+              "target": "revenue",
+              "delta": 15000,
+              "message": "Delivery-only fans bite."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "tooltip": "Focus on dine-in.",
+          "effectsIfNoGates": [
+            {
+              "target": "employeeMorale",
+              "delta": 3,
+              "message": "Staff relieved from extra load."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_06",
+      "industryId": "food",
+      "rarity": "uncommon",
+      "title": "Influencer Tasting",
+      "description": "Scenario #6: Influencer Tasting.",
+      "choices": [
+        {
+          "id": "comp",
+          "label": "Comp the tasting",
+          "tooltip": "Hope PopBoyz approve.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -3000,
+              "message": "Course costs."
+            },
+            {
+              "target": "reputation",
+              "delta": 8,
+              "message": "Clips trend."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "charge",
+          "label": "Charge full price",
+          "tooltip": "Maintain value.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": 4000,
+              "message": "They still pay."
+            },
+            {
+              "target": "reputation",
+              "delta": -2,
+              "message": "Fans call you stingy."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_07",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Menu Allergy Alert",
+      "description": "Scenario #7: Menu Allergy Alert.",
+      "choices": [
+        {
+          "id": "overhaul",
+          "label": "Overhaul kitchen protocols",
+          "tooltip": "Avoid lawsuits.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -7000,
+              "message": "New equipment purchased."
+            },
+            {
+              "target": "legalRisk",
+              "delta": -12,
+              "message": "Allergy safe zones created."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "warn",
+          "label": "Add warnings only",
+          "tooltip": "Minimal change.",
+          "effectsIfNoGates": [
+            {
+              "target": "legalRisk",
+              "delta": -3,
+              "message": "Disclaimers added."
+            },
+            {
+              "target": "reputation",
+              "delta": -2,
+              "message": "Advocates demand more."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_08",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Farmer's Market Invite",
+      "description": "Scenario #8: Farmer's Market Invite.",
+      "choices": [
+        {
+          "id": "pop_up",
+          "label": "Pop-up booth",
+          "tooltip": "Great for brand.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -4000,
+              "message": "Booth fees."
+            },
+            {
+              "target": "revenue",
+              "delta": 9000,
+              "message": "Weekend sales soar."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "skip",
+          "label": "Skip",
+          "tooltip": "Stay in kitchen.",
+          "effectsIfNoGates": [
+            {
+              "target": "innovation",
+              "delta": 2,
+              "message": "Focus on new recipes."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_09",
+      "industryId": "food",
+      "rarity": "rare",
+      "title": "Composter Pitch",
+      "description": "Scenario #9: Composter Pitch.",
+      "choices": [
+        {
+          "id": "invest",
+          "label": "Invest in compost tech",
+          "tooltip": "Boost sustainability.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -6000,
+              "message": "Smart bins installed."
+            },
+            {
+              "target": "sustainability",
+              "delta": 10,
+              "message": "Waste plummets."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "pass",
+          "label": "Pass",
+          "tooltip": "Keep old system.",
+          "effectsIfNoGates": [
+            {
+              "target": "sustainability",
+              "delta": -4,
+              "message": "Waste piles up."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_10",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Delivery Robot Trial",
+      "description": "RoboCart wants to pilot autonomous delivery in your district.",
+      "choices": [
+        {
+          "id": "pilot",
+          "label": "Pilot RoboCart",
+          "tooltip": "Novelty buzz.",
+          "effectsIfNoGates": [],
+          "gates": [
+            {
+              "type": "skillCheck",
+              "stat": "risk",
+              "threshold": 120,
+              "onSuccess": [
+                {
+                  "target": "revenue",
+                  "delta": 12000,
+                  "message": "Robots deliver hype."
+                },
+                {
+                  "target": "innovation",
+                  "delta": 5,
+                  "message": "Automation insights."
+                }
+              ],
+              "onFail": [
+                {
+                  "target": "legalRisk",
+                  "delta": 10,
+                  "message": "Robot clipped a stroller."
+                }
+              ]
+            }
+          ],
+          "followUps": []
+        },
+        {
+          "id": "decline",
+          "label": "Decline trial",
+          "tooltip": "Keep humans delivering.",
+          "effectsIfNoGates": [
+            {
+              "target": "employeeMorale",
+              "delta": 4,
+              "message": "Drivers feel secure."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_11",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Health Inspection Notice",
+      "description": "Inspector from MealWatch schedules a visit next week.",
+      "choices": [
+        {
+          "id": "deep_clean",
+          "label": "Deep clean overtime",
+          "tooltip": "Secure top grade.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -3000,
+              "message": "Paid overtime cleaners."
+            },
+            {
+              "target": "reputation",
+              "delta": 6,
+              "message": "Received A+ certificate."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "wing_it",
+          "label": "Wing it",
+          "tooltip": "Hope status quo passes.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -8,
+              "message": "Docked for minor violations."
+            },
+            {
+              "target": "legalRisk",
+              "delta": 6,
+              "message": "Another check scheduled."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_12",
+      "industryId": "food",
+      "rarity": "uncommon",
+      "title": "Midnight Crowd",
+      "description": "Scenario #12: Midnight Crowd.",
+      "choices": [
+        {
+          "id": "extend",
+          "label": "Extend hours",
+          "tooltip": "Capture late-night market.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -2000,
+              "message": "Extra staffing."
+            },
+            {
+              "target": "revenue",
+              "delta": 8000,
+              "message": "Night owls spend big."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "close",
+          "label": "Keep closing early",
+          "tooltip": "Let staff rest.",
+          "effectsIfNoGates": [
+            {
+              "target": "employeeMorale",
+              "delta": 5,
+              "message": "Team thanks you."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_13",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Staff Tip Debate",
+      "description": "Scenario #13: Staff Tip Debate.",
+      "choices": [
+        {
+          "id": "pool",
+          "label": "Pool tips",
+          "tooltip": "Level pay.",
+          "effectsIfNoGates": [
+            {
+              "target": "employeeMorale",
+              "delta": 4,
+              "message": "Team unity boosts."
+            },
+            {
+              "target": "reputation",
+              "delta": 1,
+              "message": "Guests appreciate fairness."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "status_quo",
+          "label": "Status quo",
+          "tooltip": "Keep as is.",
+          "effectsIfNoGates": [
+            {
+              "target": "employeeMorale",
+              "delta": -2,
+              "message": "Staff side-eyes management."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_14",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Spice Supplier Switch",
+      "description": "Scenario #14: Spice Supplier Switch.",
+      "choices": [
+        {
+          "id": "switch",
+          "label": "Switch supplier",
+          "tooltip": "Cheaper but untested.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": 5000,
+              "message": "Bulk discount."
+            },
+            {
+              "target": "reputation",
+              "delta": -3,
+              "message": "Flavor slightly off."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "stay",
+          "label": "Stay loyal",
+          "tooltip": "Pay premium for consistency.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -4000,
+              "message": "Premium invoice."
+            },
+            {
+              "target": "reputation",
+              "delta": 3,
+              "message": "Signature taste preserved."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_15",
+      "industryId": "food",
+      "rarity": "rare",
+      "title": "Vegan Pop-Up",
+      "description": "Scenario #15: Vegan Pop-Up.",
+      "choices": [
+        {
+          "id": "host",
+          "label": "Host vegan week",
+          "tooltip": "Attract new crowd.",
+          "effectsIfNoGates": [
+            {
+              "target": "revenue",
+              "delta": 7000,
+              "message": "Plant-based fans spend."
+            },
+            {
+              "target": "innovation",
+              "delta": 4,
+              "message": "Chef experiments."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "pass",
+          "label": "Pass",
+          "tooltip": "Stick to classics.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": -2,
+              "message": "Vegan bloggers sigh."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_16",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Holiday Booking Flood",
+      "description": "Scenario #16: Holiday Booking Flood.",
+      "choices": [
+        {
+          "id": "add_tables",
+          "label": "Add temporary seating",
+          "tooltip": "Serve more guests.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -6000,
+              "message": "Rented furniture."
+            },
+            {
+              "target": "revenue",
+              "delta": 20000,
+              "message": "Holiday tables filled."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "limit",
+          "label": "Limit bookings",
+          "tooltip": "Maintain vibe.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": 4,
+              "message": "Experience stays premium."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_17",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Fusion Contest",
+      "description": "Scenario #17: Fusion Contest.",
+      "choices": [
+        {
+          "id": "enter",
+          "label": "Enter contest",
+          "tooltip": "Win bragging rights.",
+          "effectsIfNoGates": [],
+          "gates": [
+            {
+              "type": "skillCheck",
+              "stat": "creativity",
+              "threshold": 130,
+              "onSuccess": [
+                {
+                  "target": "reputation",
+                  "delta": 10,
+                  "message": "Fusion trophy secured."
+                },
+                {
+                  "target": "revenue",
+                  "delta": 12000,
+                  "message": "Tourists arrive."
+                }
+              ],
+              "onFail": [
+                {
+                  "target": "cash",
+                  "delta": -4000,
+                  "message": "Entry fees wasted."
+                }
+              ]
+            }
+          ],
+          "followUps": []
+        },
+        {
+          "id": "skip",
+          "label": "Skip",
+          "tooltip": "Stay focused.",
+          "effectsIfNoGates": [
+            {
+              "target": "innovation",
+              "delta": -2,
+              "message": "Team bored."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_18",
+      "industryId": "food",
+      "rarity": "uncommon",
+      "title": "Charity Cook-Off",
+      "description": "Scenario #18: Charity Cook-Off.",
+      "choices": [
+        {
+          "id": "donate",
+          "label": "Donate proceeds",
+          "tooltip": "Boost goodwill.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -5000,
+              "message": "Charity donation."
+            },
+            {
+              "target": "reputation",
+              "delta": 7,
+              "message": "Community applauds."
+            },
+            {
+              "target": "sustainability",
+              "delta": 3,
+              "message": "Partnered with food bank."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "sponsor",
+          "label": "Sponsor quietly",
+          "tooltip": "Smaller gesture.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -2000,
+              "message": "Sponsorship check."
+            },
+            {
+              "target": "reputation",
+              "delta": 3,
+              "message": "Local paper mentions you."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_19",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Crypto Foodie Club",
+      "description": "A crypto supper club wants to pay in SnackCoin.",
+      "choices": [
+        {
+          "id": "accept",
+          "label": "Accept SnackCoin",
+          "tooltip": "Appeal to crypto crowd.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": 20000,
+              "message": "Club prepays deposit."
+            },
+            {
+              "target": "legalRisk",
+              "delta": 8,
+              "message": "Tax accountant panics."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "tooltip": "Avoid volatility.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": 1,
+              "message": "Traditional patrons nod."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_20",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Soda Ban Proposal",
+      "description": "Scenario #20: Soda Ban Proposal.",
+      "choices": [
+        {
+          "id": "reformulate",
+          "label": "Reformulate drinks",
+          "tooltip": "Stay compliant early.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -7000,
+              "message": "R&D new flavors."
+            },
+            {
+              "target": "sustainability",
+              "delta": 6,
+              "message": "Health groups cheer."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "lobby",
+          "label": "Lobby city hall",
+          "tooltip": "Delay rules.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -3000,
+              "message": "Advocacy spend."
+            },
+            {
+              "target": "legalRisk",
+              "delta": -4,
+              "message": "Ordinance softened."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_21",
+      "industryId": "food",
+      "rarity": "rare",
+      "title": "Storm Prep",
+      "description": "Scenario #21: Storm Prep.",
+      "choices": [
+        {
+          "id": "close",
+          "label": "Close early",
+          "tooltip": "Protect staff.",
+          "effectsIfNoGates": [
+            {
+              "target": "revenue",
+              "delta": -6000,
+              "message": "Lost service night."
+            },
+            {
+              "target": "employeeMorale",
+              "delta": 6,
+              "message": "Team grateful for safety."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "stay_open",
+          "label": "Stay open",
+          "tooltip": "Serve stranded locals.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": 5,
+              "message": "Community warmed."
+            },
+            {
+              "target": "cash",
+              "delta": -2000,
+              "message": "Damage repairs."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_22",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Franchise Inquiry",
+      "description": "Scenario #22: Franchise Inquiry.",
+      "choices": [
+        {
+          "id": "offer",
+          "label": "Offer franchise package",
+          "tooltip": "Scale rapidly.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": 25000,
+              "message": "Franchise fee."
+            },
+            {
+              "target": "marketShare",
+              "delta": 5,
+              "message": "Brand expands."
+            },
+            {
+              "target": "legalRisk",
+              "delta": 6,
+              "message": "Need oversight."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "wait",
+          "label": "Wait until ready",
+          "tooltip": "Protect quality.",
+          "effectsIfNoGates": [
+            {
+              "target": "reputation",
+              "delta": 3,
+              "message": "Brand stays premium."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_23",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Late Night Show",
+      "description": "Scenario #23: Late Night Show.",
+      "choices": [
+        {
+          "id": "cook",
+          "label": "Cook on midnight TV",
+          "tooltip": "Sleep later.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": 5000,
+              "message": "Appearance fee."
+            },
+            {
+              "target": "reputation",
+              "delta": 6,
+              "message": "TV viewers drool."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "decline",
+          "label": "Decline invite",
+          "tooltip": "Focus on operations.",
+          "effectsIfNoGates": [
+            {
+              "target": "innovation",
+              "delta": 1,
+              "message": "Menu R&D continues."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_24",
+      "industryId": "food",
+      "rarity": "uncommon",
+      "title": "Waste Tracker App",
+      "description": "Scenario #24: Waste Tracker App.",
+      "choices": [
+        {
+          "id": "implement",
+          "label": "Implement tracking app",
+          "tooltip": "Data-driven sustainability.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -4000,
+              "message": "Subscription fee."
+            },
+            {
+              "target": "sustainability",
+              "delta": 8,
+              "message": "Waste reduced."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "skip",
+          "label": "Skip",
+          "tooltip": "Manual logs continue.",
+          "effectsIfNoGates": [
+            {
+              "target": "sustainability",
+              "delta": -2,
+              "message": "Inefficient tracking."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    },
+    {
+      "id": "food_event_25",
+      "industryId": "food",
+      "rarity": "common",
+      "title": "Truffle Surprise",
+      "description": "Scenario #25: Truffle Surprise.",
+      "choices": [
+        {
+          "id": "splurge",
+          "label": "Splurge on truffles",
+          "tooltip": "Seasonal wow factor.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": -10000,
+              "message": "Imported delicacy."
+            },
+            {
+              "target": "revenue",
+              "delta": 18000,
+              "message": "Tasting menu sold out."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        },
+        {
+          "id": "pass",
+          "label": "Pass",
+          "tooltip": "Save budget.",
+          "effectsIfNoGates": [
+            {
+              "target": "cash",
+              "delta": 3000,
+              "message": "Stayed frugal."
+            }
+          ],
+          "gates": [],
+          "followUps": []
+        }
+      ]
+    }
+  ]
+}
